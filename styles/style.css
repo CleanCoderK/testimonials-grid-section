@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--light-grayish-blue);
+}
+
+/* Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper{
+  max-width: 85%;
+  max-height: 95%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.card{
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+
+.card > .header > .name > p {
+  opacity: 0.5;
+}
+
+.card > p {
+  opacity: 0.75;
+}
+
+.daniel{
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: var(--moderate-violet);
+  color: var(--white);
+}
+
+.jonathan{
+  grid-column: 3 / 4;
+  grid-row: 1;
+  background-color: var(--very-dark-grayish-blue);
+  color: var(--white);
+}
+
+.jeanette{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: var(--white);
+}
+
+.patrick{
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  background-color: var(--very-dark-blackish-blue);
+  color: var(--white);
+}
+
+.kira {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  background-color: var(--white);
+}
+
+.card > .header{
+  display: flex;
+  width: 200px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile-pic{
+  width: 35px;
+  height: 35px;
+}
+
+.profile-pic > img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name{
+  margin-left: 1rem;
+}
+
+.name > span{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.name > p{
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+
+.card > span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 916px){
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
